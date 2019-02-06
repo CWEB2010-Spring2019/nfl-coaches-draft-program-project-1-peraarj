@@ -24,41 +24,41 @@ namespace project1
 
         static void Main(string[] args) // Start of main method
         {
-			string[,] pName = { { "", "", "", "", ""},
-								{ "", "", "", "", ""},
-								{ "", "", "", "", ""},
-								{ "", "", "", "", ""},
-								{ "", "", "", "", ""},
-								{ "", "", "", "", ""},
-								{ "", "", "", "", ""},
-								{ "", "", "", "", ""},};
+			string[,] pName = { { "Dwayne Haskins", "Kyler Murray", "Drew Lock", "Daniel Jones", "Will Grier"},
+								{ "Josh Jacobs", "Damien Harris", "David Montgomery", "Justice Hill", "Devin Singletary"},
+								{ "D.K. Metcalf", "A.J. Brown", "N'Keal Harry", "Marquise Brown", "Kelvin Harmon"},
+								{ "Nick Bosa", "Quinnen Williams", "Ed Oliver", "Jeffery Simmons", "Clelin Ferrell"},
+								{ "Greedy Williams", "Deandre Baker", "Byron Murphy", "Deionte Thompson", "Amani Oruwariye"},
+								{ "Noah Fant", "Irv Smith", "T.J. Hockenson", "Kaden Smith", "Josh Oliver"},
+								{ "Josh Allen", "Devin White", "Montez Sweat", "Mack Wilson", "Devin Bush"},
+								{ "Jonah Williams", "Greg Little", "Cody Ford", "Jawaan Taylor", "Yodny Cajuste"},};
 
-			string[,] pPosition = { { "", "", "", "", ""},
-								{ "", "", "", "", ""},
-								{ "", "", "", "", ""},
-								{ "", "", "", "", ""},
-								{ "", "", "", "", ""},
-								{ "", "", "", "", ""},
-								{ "", "", "", "", ""},
-								{ "", "", "", "", ""},};
+			string[,] pInstitution = { { "(Ohio St.)", "(Oklahoma)", "(Missouri)", "(Duke)", "(West Virginia)"},
+								       { "(Alabama)", "(Alabama)", "(Iowa St.)", "(Oklahoma St.)", "(FAU)"},
+								       { "(Ole Miss)", "(Ole Miss)", "(Arizona St.)", "(Oklahoma)", "(NC State)"},
+								       { "(Ohio St.)", "(Alabama)", "(Houston)", "(Miss. State)", "(Clemson)"},
+								       { "(LSU)", "(Georgia)", "(Washington)", "(Alabama)", "(Penn State)"},
+								       { "(Iowa)", "(Alabama)", "(Iowa)", "(Standford)", "(San Jose St.)"},
+								       { "(Kentucky)", "(LSU)", "(Miss. State)", "(Alabama)", "(Michigan)"},
+								       { "(Alabama)", "(Ole Miss)", "(Oklahoma)", "(Florida)", "(West Virginia)"},};
 
-			string[,] pInstitution = { { "", "", "", "", ""},
-								{ "", "", "", "", ""},
-								{ "", "", "", "", ""},
-								{ "", "", "", "", ""},
-								{ "", "", "", "", ""},
-								{ "", "", "", "", ""},
-								{ "", "", "", "", ""},
-								{ "", "", "", "", ""},};
+			string[,] pPosition = { { "Quarterback", "Quarterback", "Quarterback", "Quarterback", "Quarterback"},
+									{ "Running Back", "Running Back", "Running Back", "Running Back", "Running Back"},
+									{ "Wide-Receiver", "Wide-Receiver", "Wide-Receiver", "Wide-Receiver", "Wide-Receiver"},
+									{ "Defensive Lineman", "Defensive Lineman", "Defensive Lineman", "Defensive Lineman", "Defensive Lineman"},
+									{ "Defensive-Back", "Defensive-Back", "Defensive-Back", "Defensive-Back", "Defensive-Back"},
+									{ "Tight End", "Tight End", "Tight End", "Tight End", "Tight End"},
+									{ "Line-Backer", "Line-Backer", "Line-Backer", "Line-Backer", "Line-Backer"},
+									{ "Offensive Tackles", "Offensive Tackles", "Offensive Tackles", "Offensive Tackles", "Offensive Tackles"},};
 
-			string[,] pSalary = { { "", "", "", "", ""},
-								{ "", "", "", "", ""},
-								{ "", "", "", "", ""},
-								{ "", "", "", "", ""},
-								{ "", "", "", "", ""},
-								{ "", "", "", "", ""},
-								{ "", "", "", "", ""},
-								{ "", "", "", "", ""},};
+			string[,] pSalary = { { "26400100", "20300100", "17420300", "13100145", "10300000"},
+								  { "24500100", "19890200", "18700800", "15000000", "11600400"},
+								  { "23400000", "21900300", "19300230", "13400230", "10000000"},
+								  { "26200300", "22000000", "16000000", "18000000", "13000000"},
+								  { "24000000", "22500249", "20000100", "16000200", "11899999"},
+								  { "27800900", "21000800", "17499233", "27900200", "14900333"},
+								  { "22900300", "19000590", "18000222", "12999999", "10000100"},
+								  { "23000000", "20000000", "19400000", "16200700", "15900000"},};
 
 			Player player01 = new Player();
 			player01.pName = "Freddy";
