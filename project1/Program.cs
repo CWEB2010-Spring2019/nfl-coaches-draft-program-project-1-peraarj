@@ -14,16 +14,28 @@ namespace project1
 		public class Player {
 			public string pName { get; set; }
 			public string pPosition { get; set; }
+			public string pRank { get; set; }
 			public string pInstitution { get; set; }
 			public int pSalary { get; set; }
+			public int Id { get; set; }
+			public bool pAvail { get; set; } 
 
-			
-			
+	
 		}
 
 
         static void Main(string[] args) // Start of main method
         {
+			// Creating the 2D arrays and data in them for later integration into player object
+			int[,] Id { { 00, 01, 02, 03, 04},
+						{ 10, 11, 12, 13, 14},
+						{ 20, 21, 22, 23, 24},
+						{ 30, 31, 32, 33, 34},
+						{ 40, 41, 42, 43, 44},
+						{ 50, 51, 52, 53, 54},
+						{ 60, 61, 62, 63, 64},
+						{ 70, 71, 72, 73, 74},};
+
 			string[,] pName = { { "Dwayne Haskins", "Kyler Murray", "Drew Lock", "Daniel Jones", "Will Grier"},
 								{ "Josh Jacobs", "Damien Harris", "David Montgomery", "Justice Hill", "Devin Singletary"},
 								{ "D.K. Metcalf", "A.J. Brown", "N'Keal Harry", "Marquise Brown", "Kelvin Harmon"},
@@ -60,6 +72,14 @@ namespace project1
 								  { "22900300", "19000590", "18000222", "12999999", "10000100"},
 								  { "23000000", "20000000", "19400000", "16200700", "15900000"},};
 
+			bool[,] pAvail = { { true, true, true, true, true},
+								{ true, true, true, true, true},
+								{ true, true, true, true, true},
+								{ true, true, true, true, true},
+								{ true, true, true, true, true},
+								{ true, true, true, true, true},
+								{ true, true, true, true, true},
+								{ true, true, true, true, true},};
 			Player player01 = new Player();
 			player01.pName = "Freddy";
 			player01.pPosition = "QBack";
