@@ -4,30 +4,26 @@ using static System.Console;
 
 namespace project1
 {
-    class Program
+
+
+	public class Player
+	{
+		public string pName { get; set; }
+		public string pPosition { get; set; }
+		public string pRank { get; set; }
+		public string pInstitution { get; set; }
+		public int pSalary { get; set; }
+		public int Id { get; set; }
+		public bool pAvail { get; set; }
+
+
+	}
+	class Program
     {
-
-		// Creation of global variables
-
-		// Classes and methods
-
-		public class Player {
-			public string pName { get; set; }
-			public string pPosition { get; set; }
-			public string pRank { get; set; }
-			public string pInstitution { get; set; }
-			public int pSalary { get; set; }
-			public int Id { get; set; }
-			public bool pAvail { get; set; } 
-
-	
-		}
-
-
         static void Main(string[] args) // Start of main method
         {
 			// Creating the 2D arrays and data in them for later integration into player object
-			int[,] Id { { 00, 01, 02, 03, 04},
+			int[,] Id = { { 00, 01, 02, 03, 04},
 						{ 10, 11, 12, 13, 14},
 						{ 20, 21, 22, 23, 24},
 						{ 30, 31, 32, 33, 34},
