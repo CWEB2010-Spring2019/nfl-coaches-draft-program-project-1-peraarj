@@ -43,7 +43,6 @@ namespace project1
 		}
 
 
-
 		static ConsoleKey Initiate() {
 			ConsoleKey sentinel;
 			WriteLine("Welcome, This is a program that will allow you to make your draft picks!");
@@ -145,45 +144,44 @@ namespace project1
 
 			ConsoleKey sentinel;			
 			int budget = 95000000;
+			int picks = 0;
 			int balSpent = 0;
-			int balRemaining = budget - balSpent;
+			int balRemaining = 0;
 			sentinel = Initiate();
 
 			while (sentinel != ConsoleKey.X) {
-				int picks = 0;
 				Console.Clear();
 				thisList.ForEach(x => WriteLine(x.ToString()));
 				WriteLine("Enter the number of the player you wish to select: ");
 				int selection = Convert.ToInt32(Console.ReadLine());
 				for (int i = 0; i < thisList.Count; i++) {
-					if (thisList[i].Id == selection)
-					{
-						thisList[i].pAvail = false;
-						coachPicks.Add(thisList[i]);
-						balSpent = balSpent + thisList[i].Price;
-						budget = budget - thisList[i].Price;
-
-						thisList.RemoveAt(i);
-						picks++;
-					
-						if (thisList[i].Price > balRemaining){
-
+					if (thisList[i].Id == selection){
+						if (thisList[i].Price > budget) {
 							Console.Clear();
 							WriteLine("You do not have sufficient funds to make that pick");
-							WriteLine("You tried to spend " + thisList[i].Price + " on " + thisList[i].pName + ". You have" + balRemaining + " left to spend.");
+							WriteLine("You tried to spend " + thisList[i].Price + " on " + thisList[i].pName + ". You have" + budget + " left to spend.");
 							sentinel = ConsoleKey.X;
 						}
+
 						else if (picks >= 5){
 							WriteLine("You have reached your limit of picks for this draft. I hope you recieved everything you wanted.");
 							sentinel = ConsoleKey.X;
 						}
-						else if (thisList[i].pAvail == false) {
+						else if (thisList[i].pAvail == false){
 							WriteLine("That player has already been drafted. Please pick another.");
 						}
-						else{
+						else {
+							thisList[i].pAvail = false;
+							coachPicks.Add(thisList[i]);
+							balSpent = balSpent + thisList[i].Price;
+							budget = budget - thisList[i].Price;
+							thisList.RemoveAt(i);
+							picks = picks + 1;
 							Console.Clear();
 							WriteLine("The players you have so far : ");
 							coachPicks.ForEach(x => WriteLine(x.ToString()));
+							WriteLine("");
+							WriteLine("Your remaining Balance = " + budget);
 							WriteLine("");
 							WriteLine("Press anykey to continue:");
 							Console.ReadLine();
